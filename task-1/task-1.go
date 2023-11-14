@@ -6,13 +6,12 @@ import (
 )
 
 func main() {
-	var a float64
-	var b float64
+	var a, b float64
 	fmt.Println("Введите а")
 	fmt.Scan(&a)
 	fmt.Println("Введите b")
 	fmt.Scan(&b)
-	c := math.Pow(a*a+b*b, 0.5)
+	c := math.Hypot(a, b)
 	fmt.Println("Гипотенуза")
 	fmt.Println(c)
 

@@ -17,7 +17,7 @@ func main() {
 	for i := 0; i < n; i++ {
 		fmt.Print(a[i])
 	}
-	println(" ")
+	println()
 	for i := n; i > 1; i-- {
 		temp = a[i-1]
 		a[i-1] = a[i-2]

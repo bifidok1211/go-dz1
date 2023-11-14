@@ -5,10 +5,15 @@ import (
 	"strings"
 )
 
+type tank struct {
+}
+
 func count(arr []string) int {
-	u := make(map[string]bool)
+	u := make(map[string]struct{})
 	for _, num := range arr {
-		u[num] = true
+		if _, ok := u[num]; !ok {
+			u[num] = struct{}{}
+		}
 	}
 	return len(u)
 }

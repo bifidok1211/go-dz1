@@ -5,9 +5,7 @@ import (
 )
 
 func main() {
-	var a int64
-	var b int64
-	var c int64
+	var a, b, c int64
 	fmt.Println("Введите а")
 	fmt.Scan(&a)
 	fmt.Println("Введите b")

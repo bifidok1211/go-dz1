@@ -9,7 +9,6 @@ func main() {
 	var s string
 	fmt.Println("Введите s")
 	fmt.Scan(&s)
-	replacer := strings.NewReplacer("1", "one")
-	out := replacer.Replace(s)
+	out := strings.ReplaceAll(s, "1", "one")
 	fmt.Println(out)
 }

@@ -5,6 +5,22 @@ import (
 	"math/rand"
 )
 
+func bo(a [][]int, n int) bool {
+	c := 0
+	for i := 0; i < n; i++ {
+		for j := 0; j < n; j++ {
+			if a[i][j] == a[j][i] {
+				c++
+			}
+		}
+	}
+	if c == n*n {
+		return true
+	} else {
+		return false
+	}
+}
+
 func main() {
 	var n int
 	fmt.Println("Введите n")
@@ -22,18 +38,10 @@ func main() {
 		for j := 0; j < n; j++ {
 			fmt.Print(a[i][j])
 		}
-		fmt.Println(" ")
+		fmt.Println()
 	}
-	fmt.Println(" ")
-	c := 0
-	for i := 0; i < n; i++ {
-		for j := 0; j < n; j++ {
-			if a[i][j] == a[j][i] {
-				c++
-			}
-		}
-	}
-	if c == n*n {
+	fmt.Println()
+	if bo(a, n) {
 		fmt.Print("YES")
 	} else {
 		fmt.Print("NO")
