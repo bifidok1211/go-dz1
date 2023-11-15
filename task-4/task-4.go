@@ -16,9 +16,8 @@ func bo(a [][]int, n int) bool {
 	}
 	if c == n*n {
 		return true
-	} else {
-		return false
 	}
+	return false
 }
 
 func main() {
